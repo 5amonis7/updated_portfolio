@@ -28,6 +28,11 @@
   font-size: 2rem;
   margin-right: 3rem;
   font-weight: bold;
+  transition: 0.5s all ease;
+}
+
+#nav-items a:hover {
+  color: #00aee9;
 }
 
 #title {

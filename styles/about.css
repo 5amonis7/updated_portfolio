@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.about {
+#about {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@
   text-align: center;
   font-size: 2.5rem;
   width: 60%;
+  padding-bottom: 5rem;
 }
 
 #description h1 {
@@ -27,12 +28,18 @@
   align-items: center;
   justify-content: space-evenly;
   font-size: 2rem;
+  margin-bottom: 15rem;
 }
 
-.skills h2 {
-  padding: 3rem 0;
-}
-
-.skills ul {
-  padding: 0 0 20rem 2rem;
+.set {
+  background: linear-gradient(to top right, #f47340, #ef2f88);
+  border-radius: 50%;
+  width: 20rem;
+  aspect-ratio: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8;
 }

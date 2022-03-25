@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles//about.css">
     <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,9 +34,9 @@
             <img src="./images/navbar/coding.png" alt="coding symbol">
 
             <div id="nav-items">
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact Me</a>
+                <a href="#about">About</a>
+                <a href="#jump">Projects</a>
+                <a href="#form">Contact Me</a>
             </div>
         </nav>
 
@@ -66,7 +68,7 @@
 
 
     <section class="body">
-        <div class="about">
+        <div id="about">
 
             <div id="description">
                 <h1>A Little Bit About Me</h1>
@@ -74,38 +76,28 @@
             </div>
 
             <div class="skills">
-                <div>
-                    <h2>Languages</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
+                <div class="set">
+                    <h3>HTML</h3>
+                    <h3>CSS</h3>
+                    <h3>JavaScript</h3>
                 </div>
 
-                <div>
-                    <h2>Tools</h2>
-                    <ul>
-                        <li>React.js</li>
-                        <li>SCSS</li>
-                        <li>Bootstrap</li>
-                    </ul>
+                <div class="set">
+                    <h3>React.js</h3>
+                    <h3>SCSS</h3>
+                    <h3>Bootstrap</h3>
                 </div>
 
-                <div>
-                    <h2>Others</h2>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Figma</li>
-                        <li>API's</li>
-                    </ul>
+                <div class="set">
+                    <h3>Node.js</h3>
+                    <h3>Figma</h3>
+                    <h3>API's</h3>
                 </div>
             </div>
         </div>
 
-
         <div id="projects-section">
-            <div class="project-title">
+            <div  id="jump" class="project-title">
                 <h1>My Recent Projects</h1>
                 <h5>Here are a few projects with links to the site and the Github repository.</h5>
             </div>
@@ -118,7 +110,48 @@
         </div>
 
 
+        <div id="form">
+
+            <div id="chat-title">
+                <h1>Let's Chat</h1>
+                <p>Go ahead and send an email and I'll get back to you shortly.</p>
+            </div>
+
+            <form method="post">
+
+                <div id="personal-info">
+                    <div>
+                        <label for="name">Name</label>
+                        <input name="name" type="text" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input name="email" type="text" required>
+                    </div>
+                </div>
+                <div id="message">
+                    <label for="message">Message</label>
+                    <textarea name="message" type="text" required></textarea>
+                </div>
+
+                <div>
+                    <button>Send</button>
+                </div>
+
+            </form>
+        </div>
+
     </section>
+
+    <footer>
+        <div id="media">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <p>Copyright &copy;</p>
+    </footer>
 
     
 
