@@ -29,32 +29,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- Top Btn -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Top Page -->
     <main class="header">
+        
         <nav id="nav">
-            <img src="./images/navbar/coding.png" alt="coding symbol">
+            <i id="logo" class="fa-solid fa-code"></i>
 
             <div id="nav-items">
                 <a href="#about">About</a>
                 <a href="#jump">Projects</a>
-                <a href="#form">Contact Me</a>
+                <a href="#form-section">Contact Me</a>
             </div>
         </nav>
 
         <div id="title">
-            <h1>Andrew <span>Monis</span></h1>
+            <h1>Andrew <span class="last-name">Monis</span></h1>
             <h3>Designer and Front-end Developer</h3>
         </div>
 
         <div id="info">
-            <div class="card">
+            <div class="card change">
                 <h3>Always<br>Learning</h3>
                 <p>Always on the hunt for new skills and ways to improve and become more effiecient.</p>
             </div>
-            <div class="card">
+            <div class="card change">
                 <h3>UI/UX<br>Design</h3>
                 <p>Designs that are focused on an amazing user interface and a great user experience.</p>
             </div>
-            <div class="card">
+            <div class="card change">
                 <h3>Beautiful<br>Code</h3>
                 <p>Always sticking with the best practices for cleaner, more readable and more effiecient code.</p>
             </div>
@@ -68,6 +74,8 @@
 
 
     <section class="body">
+
+        <!-- Beginning Of Body -->
         <div id="about">
 
             <div id="description">
@@ -76,19 +84,20 @@
             </div>
 
             <div class="skills">
-                <div class="set">
+                <div class="set change">
                     <h3>HTML</h3>
                     <h3>CSS</h3>
                     <h3>JavaScript</h3>
                 </div>
+                
 
-                <div class="set">
+                <div class="set change">
                     <h3>React.js</h3>
                     <h3>SCSS</h3>
                     <h3>Bootstrap</h3>
                 </div>
 
-                <div class="set">
+                <div class="set change">
                     <h3>Node.js</h3>
                     <h3>Figma</h3>
                     <h3>API's</h3>
@@ -96,65 +105,100 @@
             </div>
         </div>
 
-        <div id="projects-section">
-            <div  id="jump" class="project-title">
-                <h1>My Recent Projects</h1>
-                <h5>Here are a few projects with links to the site and the Github repository.</h5>
+        <div id="container">
+
+            <!-- Middle Of Body -->
+            <div id="projects-section">
+                <div  id="jump" class="project-title">
+                    <h1>My Recent Projects</h1>
+                    <h5>Here are a few projects with links to the site and the Github repository.</h5>
+                </div>
+
+                <div id="projects">
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                </div>
             </div>
 
-            <div id="projects">
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-            </div>
-        </div>
 
+            <!-- End Of Body -->
+            <div id="form-section">
 
-        <div id="form">
+                <div id="chat-title">
+                    <h1>Let's Chat</h1>
+                    <p>Go ahead and send an email and I'll get back to you shortly.</p>
+                </div>
 
-            <div id="chat-title">
-                <h1>Let's Chat</h1>
-                <p>Go ahead and send an email and I'll get back to you shortly.</p>
-            </div>
+                <div id="form-info">
 
-            <form method="post">
+                    <div id="media">
+                        <div class="media-links">
+                            <a target="_blank" href="https://www.facebook.com/andrew.monis/"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank" href="https://github.com/5amonis7"><i class="fa-brands fa-github"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/andrew-monis-022681209/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
 
-                <div id="personal-info">
-                    <div>
-                        <label for="name">Name</label>
-                        <input name="name" type="text" required>
+                        <div class="media-info">
+                            <div class="media-info_data">
+                                <h3>Phone</h3>
+                                <P><a href="tel:404-431-5088">404-431-5088</a></P>
+                            </div>
+                            <div class="media-info_data">
+                                <h3>location</h3>
+                                <p>Mableton Ga, USA</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input name="email" type="text" required>
-                    </div>
-                </div>
-                <div id="message">
-                    <label for="message">Message</label>
-                    <textarea name="message" type="text" required></textarea>
-                </div>
 
-                <div>
-                    <button>Send</button>
-                </div>
+                    <!-- Email -->
+                    <form method="post" id="myForm">
 
-            </form>
+                        <i class="fa-solid fa-circle-check check-mark"></i>
+
+                        <div id="personal-info">
+                            <div id="name-info" class="transition animation">
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" required>
+                            </div>
+                            <div id="email-info" class="transition animation">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text" required>
+                            </div>
+                        </div>
+                        <div id="message-box" class="transition animation">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" type="text" required></textarea>
+                        </div>
+
+                        <div id="button" class="transition animation">
+                            <button class="change">Send</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
         </div>
 
     </section>
 
     <footer>
-        <div id="media">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
-        </div>
-
-        <p>Copyright &copy;</p>
+    
     </footer>
 
-    
+    <!-- Email.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
 
+    <script type="text/javascript">      (function () {
+        emailjs.init("user_GigLFvn6e2yFniNFiu8ZC");
+      })();
+    </script>
+
+    <!-- My Script -->
+    <script type="text/javascript" src="./scripts/script.js"></script>
 
 </body>
 </html>
