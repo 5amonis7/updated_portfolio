@@ -3,6 +3,13 @@
       const message = document.querySelector('#message')
       const checkMark = document.querySelector('.check-mark')
       const animation = document.querySelectorAll('.animation')
+      const card = document.querySelectorAll('.card');
+      const skills = document.querySelector('.skills')
+      const set = document.querySelectorAll('.set')
+      const ball1 = document.querySelector('#ball1')
+      const ball2 = document.querySelector('#ball2')
+      const ball3 = document.querySelector('#ball3')
+      
     
     
     // listen to the form submission
@@ -45,7 +52,6 @@
       });
 
 
-
 // Whether or not Top Btn shows
 function isInViewPort(e){
 	const rect = e.getBoundingClientRect();
@@ -77,4 +83,124 @@ function topFunction(){
 		behavior: 'smooth'
 	});
 };
-  
+
+
+// Animations
+
+window.onload = function(){
+  card.forEach((e, ind) => {
+    e.style.animationDelay = `${ ind * .3}s`;
+    setTimeout(function(){
+      e.style.opacity = '1';
+    }, ind * 500)
+  })
+} 
+
+document.addEventListener('scroll' , function(){
+  if(isInViewPort(skills) === true){
+    ball1.style.animation = 'roll-left 2s none';
+    ball2.style.animation = 'roll-up 2s none';
+    ball3.style.animation = 'roll-right 2s none';
+    set.forEach((e) => {
+      e.style.visibility = 'visible';
+    }) 
+  }
+})
+
+
+document.querySelectorAll('.letter').forEach(el=>{
+  el.addEventListener('mouseover', () => {
+    el.classList.add('jump')
+    setTimeout(function(){
+      el.classList.remove('jump')
+    }, 500)
+  })
+})
+
+
+// Carousel Projects
+
+const slide = document.querySelector(".projects-box");
+let slides = document.querySelectorAll(".project");
+const leftArrow = document.querySelector('#left-arrow').querySelector('i');
+const rightArrow = document.querySelector('#right-arrow').querySelector('i');
+let index = 1;
+let slideId;
+const interval = 500;
+
+const firstClone = slides[0].cloneNode(true);
+const secondClone = slides[1].cloneNode(true);
+const thirdClone = slides[2].cloneNode(true);
+const fourthClone = slides[3].cloneNode(true);
+const lastClone = slides[5].cloneNode(true);
+
+
+firstClone.id = 'first-clone';
+lastClone.id = 'last-clone';
+
+
+slide.append(firstClone);
+slide.append(secondClone);
+slide.append(thirdClone);
+slide.append(fourthClone);
+slide.prepend(lastClone);
+
+
+const slideWidth = slides[index].clientWidth + 64;
+
+// Autoplay turned off
+// const startSlide = () => {
+//   slideId = setInterval(() => {
+//     index++;
+//     slide.style.transform = `translateX(${-slideWidth * index}px)`
+//     slide.style.transition = '.7s';
+//   }, interval)
+// }
+
+// slide.addEventListener('mouseenter', () => {
+//   clearInterval(slideId);
+// })
+// slide.addEventListener('mouseleave', startSlide)
+
+// startSlide()
+
+slide.addEventListener('transitionend', () => {
+  slides = document.querySelectorAll(".project");
+  if(slides[index].id === firstClone.id){
+    slide.style.transition = 'none';
+    index = 1;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`
+  }
+  else if(slides[index].id === lastClone.id){
+    slide.style.transition = 'none';
+    index = slides.length - 5;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`
+  }
+})
+
+function moveToNextSlide(){
+  slides = document.querySelectorAll(".project");
+  if(index >= slides.length - 1) return
+  index++;
+  slide.style.transform = `translateX(${-slideWidth * index}px)`
+  slide.style.transition = '.7s';
+  rightArrow.disabled = true;
+  setTimeout(function () {
+    rightArrow.disabled = false;
+  }, 800)
+}
+
+function moveToPreviousSlide(){
+  if(index <= 0) return
+  index--;
+  slide.style.transform = `translateX(${-slideWidth * index}px)`
+  slide.style.transition = '.7s';
+  leftArrow.disabled = true;
+  setTimeout(function () {
+    leftArrow.disabled = false;
+  }, 800)
+}
+
+
+rightArrow.addEventListener('click', moveToNextSlide)
+leftArrow.addEventListener('click', moveToPreviousSlide)

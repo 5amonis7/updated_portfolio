@@ -77,15 +77,17 @@
   line-height: 1.5;
 }
 
-.last-name {
-  background: linear-gradient(to right, #00aee9, #00e4d5);
-  -webkit-background-clip: text;
-  color: transparent;
+.letter {
+  color: #00cbde;
   transition: 0.5s all ease;
   display: inline-block;
 }
 
-.last-name:hover {
+.jump {
+  animation: jump 0.5s none;
+}
+
+span.letter:hover {
   color: #f15164;
 }
 
@@ -106,11 +108,12 @@
   color: white;
   box-shadow: 0px 0px 5px grey;
   margin-bottom: 2rem;
-  transition: 0.5s all ease-in-out;
   position: relative;
   display: inline-block;
   z-index: 1;
   transition: 0.5s all ease;
+  animation: rise 2s none;
+  opacity: 0;
 }
 
 .card h3 {
@@ -129,6 +132,7 @@
   background: #00e3d5;
   position: absolute;
   bottom: 0;
+  z-index: 5;
 }
 
 .circle {
@@ -142,6 +146,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 }
 
 .circle i {

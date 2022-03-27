@@ -40,4 +40,5 @@
   justify-content: center;
   line-height: 1.8;
   transition: 0.5s all ease-in-out;
+  visibility: hidden;
 }

@@ -81,7 +81,7 @@ footer {
   font-weight: bold;
   bottom: 40px;
   right: 30px;
-  z-index: 1;
+  z-index: 99;
   border: none;
   outline: none;
   color: white;
@@ -92,4 +92,53 @@ footer {
   background: linear-gradient(to bottom left, #f47340, #ef2f88);
   transition: 0.5s all ease;
   cursor: pointer;
+}
+
+/* Animation */
+@keyframes rise {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes roll-left {
+  from {
+    transform: translateX(-600%) rotate(0deg);
+  }
+  to {
+    transform: translateX(0) rotate(720deg);
+  }
+}
+
+@keyframes roll-up {
+  from {
+    transform: translatey(150%);
+  }
+  to {
+    transform: translatey(0);
+  }
+}
+
+@keyframes roll-right {
+  from {
+    transform: translateX(600%) rotate(0deg);
+  }
+  to {
+    transform: translateX(0) rotate(-720deg);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
