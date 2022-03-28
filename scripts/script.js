@@ -53,7 +53,7 @@ document.querySelector('#myForm').addEventListener("submit", function (event) {
 
 // Responsive animation
 
-let width = screen.width;
+let width = window.innerWidth;
 headerInfo()
 
 function headerInfo() {
@@ -115,7 +115,7 @@ function topFunction() {
 window.onload = function () {
     if (width > 700) {
         card.forEach((e, ind) => {
-            e.style.animation = 'rise .3s none';
+            e.style.animation = 'rise 3s none';
             e.style.animationDelay = `${ind * .3}s`;
             setTimeout(function () {
                 e.style.opacity = '1';
