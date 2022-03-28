@@ -67,14 +67,11 @@ function headerInfo() {
                     e.style.visibility = 'visible';
                 })
 
-                card.forEach((e, ind) => {
-                    e.style.animation = 'rise .3s none';
-                    e.style.animationDelay = `${ind * .3}s`;
-                    setTimeout(function () {
-                        e.style.opacity = '1';
-                    }, ind * 500)
-                })
             }
+        })
+    } else {
+        set.forEach((e) => {
+            e.style.visibility = 'visible';
         })
     }
 }
@@ -114,6 +111,23 @@ function topFunction() {
 
 
 // Animations
+
+window.onload = function () {
+    if (width > 700) {
+        card.forEach((e, ind) => {
+            e.style.animation = 'rise .3s none';
+            e.style.animationDelay = `${ind * .3}s`;
+            setTimeout(function () {
+                e.style.opacity = '1';
+            }, ind * 500)
+        })
+    } else {
+        card.forEach((e) => {
+            e.style.opacity = '1';
+        })
+    }
+}
+
 
 document.querySelectorAll('.letter').forEach(el => {
     el.addEventListener('mouseover', () => {
