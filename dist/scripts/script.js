@@ -71,9 +71,9 @@ function headerInfo() {
     }
     else {
         if (isInViewPort(skills) === true) {
-            ball1.style.animation = 'roll-left 2s none';
-            ball3.style.animation = 'roll-up 2s none';
-            ball2.style.animation = 'roll-right 2s none';
+            ball1.style.animation = '';
+            ball3.style.animation = '';
+            ball2.style.animation = '';
             set.forEach((e) => {
                 e.style.visibility = 'visible';
             })
@@ -118,13 +118,15 @@ function topFunction() {
 // Animations
 
 window.onload = function () {
-    card.forEach((e, ind) => {
-        e.style.animation = 'rise .3s none';
-        e.style.animationDelay = `${ind * .3}s`;
-        setTimeout(function () {
-            e.style.opacity = '1';
-        }, ind * 500)
-    })
+    if (width > 700) {
+        card.forEach((e, ind) => {
+            e.style.animation = 'rise .3s none';
+            e.style.animationDelay = `${ind * .3}s`;
+            setTimeout(function () {
+                e.style.opacity = '1';
+            }, ind * 500)
+        })
+    }
 }
 
 
