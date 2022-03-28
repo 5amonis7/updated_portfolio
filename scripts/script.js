@@ -122,7 +122,7 @@ window.onload = function () {
             }, ind * 500)
         })
     } else {
-        card.forEach((e) => {
+        card.forEach((e, index) => {
             e.style.opacity = '1';
         })
     }
