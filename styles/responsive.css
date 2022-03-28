@@ -97,8 +97,9 @@
     font-size: 1.8rem;
   }
   .links a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 0.6rem;
+    padding: 0.7rem;
   }
   .links {
     transform: translateY(0%);
