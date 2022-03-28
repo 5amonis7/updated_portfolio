@@ -11,7 +11,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #nav {
   display: flex;
   align-items: center;
@@ -20,7 +19,6 @@
   height: 5rem;
   margin-top: 1.2rem;
 }
-
 #nav i {
   font-size: 5rem;
   background: linear-gradient(to right, #00aee9, #00e4d5);
@@ -28,24 +26,21 @@
   color: transparent;
   transition: 0.5s all ease;
 }
-
 #nav i:hover {
   color: #f15164;
 }
-
 #nav-items a {
-  background: none;
+  background: 0 0;
   text-decoration: none;
-  color: black;
+  color: #000;
   font-size: 2rem;
   margin-right: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   transition: 0.4s all ease;
   position: relative;
   z-index: 1;
   padding: 0.3rem 0.5rem;
 }
-
 #nav-items a:before {
   background: linear-gradient(to right, #00aee9, #00e4d5);
   content: "";
@@ -60,37 +55,30 @@
   opacity: 0;
   transition: 0.2s all ease;
 }
-
 #nav-items a:hover:before {
   opacity: 1;
   transform: translateY(0);
 }
-
 #nav-items a:hover {
-  color: white;
+  color: #fff;
 }
-
 #title {
   margin: 6rem 0 4rem 0;
   text-align: center;
   font-size: 2rem;
   line-height: 1.5;
 }
-
 .letter {
   color: #00cbde;
   transition: 0.5s all ease;
   display: inline-block;
 }
-
 .jump {
   animation: jump 0.5s none;
 }
-
 span.letter:hover {
   color: #f15164;
 }
-
 #info {
   display: flex;
   width: 80%;
@@ -98,34 +86,29 @@ span.letter:hover {
   flex-wrap: wrap;
   margin-bottom: 4rem;
 }
-
 .card {
   background: linear-gradient(to top right, #00aee9, #00e4d5);
   width: 20rem;
   height: 27rem;
   border-radius: 30px;
   text-align: center;
-  color: white;
-  box-shadow: 0px 0px 5px grey;
+  color: #fff;
+  box-shadow: 0 0 5px grey;
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
   z-index: 1;
   transition: 0.5s all ease;
-  animation: rise 2s none;
   opacity: 0;
 }
-
 .card h3 {
   font-size: 2.5rem;
   margin: 2rem 0;
 }
-
 .card p {
   font-size: 1.7rem;
   padding: 0 1.2rem;
 }
-
 .bar {
   width: 100%;
   height: 2rem;
@@ -134,7 +117,6 @@ span.letter:hover {
   bottom: 0;
   z-index: 5;
 }
-
 .circle {
   width: 6rem;
   border-radius: 50%;
@@ -148,14 +130,11 @@ span.letter:hover {
   justify-content: center;
   z-index: 5;
 }
-
 .circle i {
-  color: white;
+  color: #fff;
   transform: translateY(-30%);
   font-size: 3rem;
 }
-
-/* Mobile Menu */
 #mobile-menu {
   position: fixed;
   top: 0;
@@ -168,11 +147,10 @@ span.letter:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 5px grey;
+  box-shadow: 0 0 5px grey;
   transform: translateY(-100%);
   transition: 0.5s all ease;
 }
-
 #mobile-menu i {
   font-size: 5rem;
   background: linear-gradient(to right, #00aee9, #00e4d5);
@@ -180,25 +158,22 @@ span.letter:hover {
   color: transparent;
   transition: 0.5s all ease;
 }
-
-#mobile-menu i:hover,
-#mobile-items a:hover {
+#mobile-items a:hover,
+#mobile-menu i:hover {
   color: #f15164;
 }
-
 #mobile-items a {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 2rem;
   text-decoration: none;
-  color: black;
+  color: #000;
   font-size: 4rem;
-  font-weight: bold;
+  font-weight: 700;
   z-index: 1;
   transition: 0.5s all ease;
 }
-
 .hamburger {
   position: absolute;
   right: 3rem;
@@ -209,7 +184,6 @@ span.letter:hover {
   z-index: 99;
   display: none;
 }
-
 .hamburger-icon {
   position: relative;
   width: 35px;
@@ -217,9 +191,8 @@ span.letter:hover {
   background: #00aee9;
   transition: 0.5s all ease;
 }
-
-.hamburger-icon::before,
-.hamburger-icon::after {
+.hamburger-icon::after,
+.hamburger-icon::before {
   content: "";
   position: absolute;
   width: inherit;
@@ -233,11 +206,9 @@ span.letter:hover {
 .hamburger-icon::after {
   top: 20px;
 }
-
 .hamburger-icon.open:after {
   transform: rotate(-45deg) translate(7px, -5px);
 }
-
 .hamburger-icon.open:before {
   transform: rotate(45deg) translate(3px, 1px);
 }
