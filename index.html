@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./styles//about.css">
     <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,6 +35,21 @@
 
     <!-- Top Page -->
     <main class="header">
+
+        <div class="hamburger">
+            <div class="hamburger-icon"></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="">
+            <i id="logo" class="fa-solid fa-code"></i>
+
+            <div id="mobile-items">
+                <a class="mobile-item" href="#about">About</a>
+                <a class="mobile-item" href="#jump">Projects</a>
+                <a class="mobile-item" href="#form-section">Contact Me</a>
+            </div>
+        </nav>
         
         <nav id="nav">
             <i id="logo" class="fa-solid fa-code"></i>
@@ -52,15 +68,15 @@
         </div>
 
         <div id="info">
-            <div class="card change">
+            <div id="card1" class="card change">
                 <h3>Always<br>Learning</h3>
                 <p>Always eager to learn new skills to find new and better ways to improve your experience.</p>
             </div>
-            <div class="card change">
+            <div id="card2" class="card change">
                 <h3>UI/UX<br>Design</h3>
                 <p>Designs that are focused on an smooth user interface and a great user experience.</p>
             </div>
-            <div class="card change">
+            <div id="card3" class="card change">
                 <h3>Beautiful<br>Code</h3>
                 <p>Keeping up with the best practices for cleaner, efficient and more readable code.</p>
             </div>
@@ -116,13 +132,11 @@
 
                 <div id="projects">
 
-                    <button id="left-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                    <button onclick="sliderScrollLeft()" id="left-arrow"><i class="fa-solid fa-caret-left"></i></button>
 
-                    <button id="right-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                    <button onclick="sliderScrollRight()" id="right-arrow"><i class="fa-solid fa-caret-right"></i></button>
 
                     <div class="projects-box">
-
-                        <div class="project">To Be <br>Filled</div>
 
                         <div style="background-image: url('./images/projects/Netflix\ -\ Watch\ TV\ Shows\ Online\,\ Watch\ Movies\ Online\ \(3\).png');" class="project">
                             <div class="links">
@@ -144,6 +158,8 @@
                                 <a target="_blank" href="https://5amonis7.github.io/passwordgenie/">Website</a>
                             </div>
                         </div>
+
+                        <div class="project">To Be <br>Filled</div>
 
                         <div class="project">To Be <br>Filled</div>
 

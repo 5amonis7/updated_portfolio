@@ -29,7 +29,6 @@
   width: 100%;
   margin-bottom: 5rem;
   position: relative;
-  overflow: hidden;
 }
 
 .projects-box {
@@ -40,7 +39,8 @@
   width: auto;
   white-space: nowrap;
   transition: 0.5s ease;
-  transform: translateX(-40%);
+  padding: 0 2rem;
+  overflow: hidden;
 }
 
 .project {
@@ -106,27 +106,22 @@
 }
 
 #left-arrow {
-  position: absolute;
   left: 0;
-  padding: 4rem;
-  font-size: 6rem;
-  background: transparent;
-  border: none;
-  height: 100%;
-  z-index: 10;
-}
-#left-arrow i,
-#right-arrow i {
-  cursor: pointer;
-  color: #00cbde;
 }
 #right-arrow {
-  position: absolute;
   right: 0rem;
-  padding: 4rem;
+}
+
+#left-arrow,
+#right-arrow {
+  position: absolute;
+  padding: 0.5rem;
   font-size: 6rem;
-  background: transparent;
+  background: rgba(128, 128, 128, 0.4);
   border: none;
   height: 100%;
   z-index: 10;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #00cbde;
 }

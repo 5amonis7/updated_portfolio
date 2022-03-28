@@ -97,10 +97,12 @@ footer {
 /* Animation */
 @keyframes rise {
   from {
-    transform: translateY(20%);
+    transform: translateY(30%);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 

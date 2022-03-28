@@ -120,33 +120,92 @@ document.querySelectorAll('.letter').forEach(el=>{
 
 // Carousel Projects
 
-const slide = document.querySelector(".projects-box");
-let slides = document.querySelectorAll(".project");
-const leftArrow = document.querySelector('#left-arrow').querySelector('i');
-const rightArrow = document.querySelector('#right-arrow').querySelector('i');
-let index = 1;
-let slideId;
-const interval = 500;
-
-const firstClone = slides[0].cloneNode(true);
-const secondClone = slides[1].cloneNode(true);
-const thirdClone = slides[2].cloneNode(true);
-const fourthClone = slides[3].cloneNode(true);
-const lastClone = slides[5].cloneNode(true);
+const sliders = document.querySelector('.projects-box');
+const slide = document.querySelectorAll(".project");
+let boxPadding = 64;
+let scrollperclick = slide[1].clientWidth + boxPadding;
+let scrollAmount = 0;
 
 
-firstClone.id = 'first-clone';
-lastClone.id = 'last-clone';
+function sliderScrollLeft(){
+  sliders.scrollTo({
+    top: 0,
+    left: (scrollAmount -= scrollperclick),
+    behavior: 'smooth'
+  })
+
+  if(scrollAmount < 0){
+    scrollAmount = 0
+  }
+}
+
+function sliderScrollRight(){
+  if(scrollAmount <= sliders.scrollWidth - sliders.clientWidth){
+    sliders.scrollTo({
+      top: 0,
+      left: (scrollAmount += scrollperclick),
+      behavior: 'smooth'
+    })
+  }
+}
 
 
-slide.append(firstClone);
-slide.append(secondClone);
-slide.append(thirdClone);
-slide.append(fourthClone);
-slide.prepend(lastClone);
 
 
-const slideWidth = slides[index].clientWidth + 64;
+
+// const slide = document.querySelector(".projects-box");
+// let slides = document.querySelectorAll(".project");
+// const leftArrow = document.querySelector('#left-arrow');
+// const rightArrow = document.querySelector('#right-arrow');
+// let index = 1;
+
+// const slideWidth = slides[index].clientWidth + 64;
+
+
+// rightArrow.addEventListener('click', () => {
+//   if(index >= slides.length - 1) return
+//   index++;
+//   slide.style.transform = `translateX(${-slideWidth * index}px)`
+//   slide.style.transition = '.7s';
+// })
+
+// leftArrow.addEventListener('click', () => {
+//   if(index <= 0) return
+//   index--;
+//   slide.style.transform = `translateX(${-slideWidth * index}px)`
+//   slide.style.transition = '.7s';
+//   leftArrow.disabled = true;
+// })
+
+
+
+
+
+
+
+// let index = 1;
+// let slideId;
+// const interval = 500;
+
+// const firstClone = slides[0].cloneNode(true);
+// const secondClone = slides[1].cloneNode(true);
+// const thirdClone = slides[2].cloneNode(true);
+// const fourthClone = slides[3].cloneNode(true);
+// const lastClone = slides[5].cloneNode(true);
+
+
+// firstClone.id = 'first-clone';
+// lastClone.id = 'last-clone';
+
+
+// slide.append(firstClone);
+// slide.append(secondClone);
+// slide.append(thirdClone);
+// slide.append(fourthClone);
+// slide.prepend(lastClone);
+
+
+// const slideWidth = slides[index].clientWidth + 64;
 
 // Autoplay turned off
 // const startSlide = () => {
@@ -164,43 +223,90 @@ const slideWidth = slides[index].clientWidth + 64;
 
 // startSlide()
 
-slide.addEventListener('transitionend', () => {
-  slides = document.querySelectorAll(".project");
-  if(slides[index].id === firstClone.id){
-    slide.style.transition = 'none';
-    index = 1;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`
-  }
-  else if(slides[index].id === lastClone.id){
-    slide.style.transition = 'none';
-    index = slides.length - 5;
-    slide.style.transform = `translateX(${-slideWidth * index}px)`
+// slide.addEventListener('transitionend', () => {
+//   slides = document.querySelectorAll(".project");
+//   if(slides[index].id === firstClone.id){
+//     slide.style.transition = 'none';
+//     index = 1;
+//     slide.style.transform = `translateX(${-slideWidth * index}px)`
+//   }
+//   else if(slides[index].id === lastClone.id){
+//     slide.style.transition = 'none';
+//     index = slides.length - 5;
+//     slide.style.transform = `translateX(${-slideWidth * index}px)`
+//   }
+// })
+
+// function moveToNextSlide(){
+//   slides = document.querySelectorAll(".project");
+//   if(index >= slides.length - 1) return
+//   index++;
+//   slide.style.transform = `translateX(${-slideWidth * index}px)`
+//   slide.style.transition = '.7s';
+//   rightArrow.disabled = true;
+//   setTimeout(function () {
+//     rightArrow.disabled = false;
+//   }, 800)
+// }
+
+// function moveToPreviousSlide(){
+//   if(index <= 0) return
+//   index--;
+//   slide.style.transform = `translateX(${-slideWidth * index}px)`
+//   slide.style.transition = '.7s';
+//   leftArrow.disabled = true;
+//   setTimeout(function () {
+//     leftArrow.disabled = false;
+//   }, 800)
+// }
+
+
+// rightArrow.addEventListener('click', moveToNextSlide)
+// leftArrow.addEventListener('click', moveToPreviousSlide)
+
+// Mobile Nav
+const hamburger = document.querySelector('.hamburger');
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+const mobileMenu = document.querySelector('#mobile-menu');
+const mobileItem = document.querySelectorAll('.mobile-item');
+
+let showingMenu = false;
+
+hamburger.addEventListener('click', () => {
+  if(showingMenu === false){
+    hamburger.style.transform = 'rotate(720deg)';
+    hamburgerIcon.style.background = 'transparent';
+    hamburgerIcon.classList.add('open');
+    mobileMenu.style.transform = 'translateY(0)';
+    showingMenu = true;
+  }else if(showingMenu === true){
+    hamburger.style.transform = 'rotate(-720deg)';
+    hamburgerIcon.style.background = '#00aee9';
+    hamburgerIcon.classList.remove('open');
+    mobileMenu.style.transform = 'translateY(-100%)';
+    showingMenu = false;
   }
 })
 
-function moveToNextSlide(){
-  slides = document.querySelectorAll(".project");
-  if(index >= slides.length - 1) return
-  index++;
-  slide.style.transform = `translateX(${-slideWidth * index}px)`
-  slide.style.transition = '.7s';
-  rightArrow.disabled = true;
-  setTimeout(function () {
-    rightArrow.disabled = false;
-  }, 800)
-}
+mobileItem.forEach((e) => {
+  e.addEventListener('click', () => {
+    hamburger.style.transform = 'rotate(-720deg)';
+    hamburgerIcon.style.background = '#00aee9';
+    hamburgerIcon.classList.remove('open');
+    mobileMenu.style.transform = 'translateY(-100%)';
+  })
+})
 
-function moveToPreviousSlide(){
-  if(index <= 0) return
-  index--;
-  slide.style.transform = `translateX(${-slideWidth * index}px)`
-  slide.style.transition = '.7s';
-  leftArrow.disabled = true;
-  setTimeout(function () {
-    leftArrow.disabled = false;
-  }, 800)
-}
+// Responsive
+// let width = screen.width;
 
+// function headerInfo(){
+//   if(width === 910){
+//     card.forEach((e) => {
+//       e.addEventListener('click', () => {
 
-rightArrow.addEventListener('click', moveToNextSlide)
-leftArrow.addEventListener('click', moveToPreviousSlide)
+//       })
+//     })
+//   }
+// }
+

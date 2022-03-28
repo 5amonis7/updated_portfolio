@@ -5,6 +5,7 @@
   align-items: center;
   background: linear-gradient(to top, #00aee9, #00e4d5);
   color: white;
+  overflow: hidden;
 }
 
 #description {
