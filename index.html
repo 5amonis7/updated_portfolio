@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Front-end web designer looking to help optimize and design a website that best represents your company.">
+    <title>Andrew Monis</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Font Family Request -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="./styles/config.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles//about.css">
+    <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/responsive.css"> -->
+    <link rel="stylesheet" href="./styles/main-min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Top Btn -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Top Page -->
+    <main class="header">
+
+        <div class="hamburger">
+            <div class="hamburger-icon"></div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="">
+            <i id="logo" class="fa-solid fa-code"></i>
+
+            <div id="mobile-items">
+                <a class="mobile-item" href="#about">About</a>
+                <a class="mobile-item" href="#jump">Projects</a>
+                <a class="mobile-item" href="#form-section">Contact Me</a>
+            </div>
+        </nav>
+
+        <!-- Normal Menu -->
+        <nav id="nav">
+            <i id="logo" class="fa-solid fa-code"></i>
+
+            <div id="nav-items">
+                <a href="#about">About</a>
+                <a href="#jump">Projects</a>
+                <a href="#form-section">Contact Me</a>
+            </div>
+        </nav>
+
+        <div id="title">
+            <h1>Andrew <span class="letter">M</span><span class="letter">o</span><span class="letter">n</span><span
+                    class="letter">i</span><span class="letter">s</span>
+            </h1>
+            <h3>Designer and Front-end Developer</h3>
+        </div>
+
+        <div id="info">
+            <div id="card1" class="card change">
+                <h3>Always<br>Learning</h3>
+                <p>Always eager to learn new skills to find new and better ways to improve your experience.</p>
+            </div>
+            <div id="card2" class="card change">
+                <h3>UI/UX<br>Design</h3>
+                <p>Designs that are focused on an smooth user interface and a great user experience.</p>
+            </div>
+            <div id="card3" class="card change">
+                <h3>Beautiful<br>Code</h3>
+                <p>Keeping up with the best practices for cleaner, efficient and more readable code.</p>
+            </div>
+        </div>
+
+
+        <div class="bar"></div>
+        <div class="circle"><i class="fa-solid fa-caret-down"></i></div>
+
+    </main>
+
+
+    <section class="body">
+
+        <!-- Beginning Of Body -->
+        <div id="about">
+
+            <div id="description">
+                <h1>A Little Bit About Me</h1>
+                <p>Every since I started my journey, I knew creating websites would be an experience that I would always
+                    enjoy. I create esthetically pleasing, fast, and easy to websites. I get motivated by seeing the
+                    project built from the ground up. Being a desinger and a developer helps create a successful website
+                    with all of its details. All you need is a little communication and a good cup of coffee.</p>
+            </div>
+
+            <div class="skills">
+                <div id="ball1" class="set change">
+                    <h3>HTML</h3>
+                    <h3>CSS</h3>
+                    <h3>JavaScript</h3>
+                </div>
+
+
+                <div id="ball2" class="set change">
+                    <h3>React.js</h3>
+                    <h3>SCSS</h3>
+                    <h3>Bootstrap</h3>
+                </div>
+
+                <div id="ball3" class="set change">
+                    <h3>Node.js</h3>
+                    <h3>Figma</h3>
+                    <h3>API's</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+
+            <!-- Middle Of Body -->
+            <div id="projects-section">
+                <div id="jump" class="project-title">
+                    <h1>My Recent Projects</h1>
+                    <h5>Here are a few projects with links to the site and the Github repository.</h5>
+                </div>
+
+                <div id="projects">
+
+                    <button onclick="sliderScrollLeft()" id="left-arrow"><i class="fa-solid fa-caret-left"></i></button>
+
+                    <button onclick="sliderScrollRight()" id="right-arrow"><i
+                            class="fa-solid fa-caret-right"></i></button>
+
+                    <div class="projects-box">
+
+                        <div style="background-image: url('./images/projects/Netflix\ -\ Watch\ TV\ Shows\ Online\,\ Watch\ Movies\ Online\ \(3\).png');"
+                            class="project">
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/5amonis7/netflix-landing-page">Github</a>
+                                <a target="_blank" href="https://5amonis7.github.io/netflix-landing-page/">Website</a>
+                            </div>
+                        </div>
+
+                        <div style="background-image: url('./images/projects/Ecommerce\ \(5\).png');" class="project">
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/5amonis7/ecommerce">Github</a>
+                                <a target="_blank" href="https://5amonis7.github.io/ecommerce/">Website</a>
+                            </div>
+                        </div>
+
+                        <div style="background-image: url('./images/projects/React\ App\ \(4\).png');" class="project">
+                            <div class="links">
+                                <a target="_blank" href="https://github.com/5amonis7/passwordgenie">Github</a>
+                                <a target="_blank" href="https://5amonis7.github.io/passwordgenie/">Website</a>
+                            </div>
+                        </div>
+
+                        <div class="project">To Be <br>Filled</div>
+
+                        <div class="project">To Be <br>Filled</div>
+
+                        <div class="project">To Be <br>Filled</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- End Of Body -->
+            <div id="form-section">
+
+                <div id="chat-title">
+                    <h1>Let's Chat</h1>
+                    <p>Go ahead and send an email and I'll get back to you shortly.</p>
+                </div>
+
+                <div id="form-info">
+
+                    <div id="media">
+                        <div class="media-links">
+                            <a target="_blank" href="https://www.facebook.com/andrew.monis/"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank" href="https://github.com/5amonis7"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/andrew-monis-022681209/"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+
+                        <div class="media-info">
+                            <div class="media-info_data">
+                                <h3>Phone</h3>
+                                <P><a href="tel:404-431-5088">404-431-5088</a></P>
+                            </div>
+                            <div class="media-info_data">
+                                <h3>location</h3>
+                                <p>Mableton Ga, USA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <form method="post" id="myForm">
+
+                        <i class="fa-solid fa-circle-check check-mark"></i>
+
+                        <div id="personal-info">
+                            <div id="name-info" class="transition animation">
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" required>
+                            </div>
+                            <div id="email-info" class="transition animation">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text" required>
+                            </div>
+                        </div>
+                        <div id="message-box" class="transition animation">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" type="text" required></textarea>
+                        </div>
+
+                        <div id="button" class="transition animation">
+                            <button class="change">Send</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <!-- Email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">      (function () {
+            emailjs.init("user_GigLFvn6e2yFniNFiu8ZC");
+        })();
+    </script>
+
+    <!-- My Script -->
+    <script type="text/javascript" src="./scripts/script-min.js"></script>
+
+</body>
+
+</html>

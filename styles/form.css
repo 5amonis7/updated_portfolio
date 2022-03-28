@@ -1,0 +1,123 @@
+#form-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+#chat-title {
+  text-align: center;
+  font-size: 2.5rem;
+  width: 40%;
+  margin-bottom: 2rem;
+}
+#chat-title h1 {
+  padding-bottom: 2rem;
+}
+#form-info {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 3px grey;
+}
+#media {
+  background: linear-gradient(to top right, #00aee9, #00e4d5);
+  width: 15rem;
+}
+.media-links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3rem;
+  padding-top: 2rem;
+  cursor: pointer;
+}
+.media-links i {
+  color: #fff;
+  transition: 0.5s all ease;
+}
+.media-links i:hover {
+  color: #f15164;
+  transform: scale(1.2);
+}
+#media a,
+#media h3,
+#media p {
+  color: #fff;
+  text-decoration: none;
+}
+.media-info {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+  padding-left: 1.7rem;
+}
+form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+#personal-info {
+  width: 34rem;
+  padding: 0 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#personal-info input {
+  padding-left: 0.5rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0;
+  height: 20rem;
+  width: 35rem;
+}
+form input {
+  padding: 0.3rem 0;
+  width: 12rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px grey;
+  outline: 0;
+}
+#message-box {
+  margin-top: 2rem;
+  width: 25rem;
+}
+#message-box textarea {
+  padding: 0.5rem;
+  height: 7rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px grey;
+  outline: 0;
+  resize: none;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+form button {
+  border: none;
+  margin-top: 2rem;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(to top right, #00aee9, #00e4d5);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.check-mark {
+  font-size: 0rem;
+  background: linear-gradient(to right, #00aee9, #00e4d5);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.5s all ease;
+}
