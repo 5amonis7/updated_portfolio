@@ -4,21 +4,18 @@
   flex-direction: column;
   align-items: center;
   background: linear-gradient(to top, #00aee9, #00e4d5);
-  color: white;
+  color: #fff;
   overflow: hidden;
 }
-
 #description {
   text-align: center;
   font-size: 2.5rem;
   width: 60%;
   padding-bottom: 5rem;
 }
-
 #description h1 {
   padding: 3rem;
 }
-
 .skills {
   width: 80%;
   display: flex;
@@ -28,7 +25,6 @@
   margin-bottom: 15rem;
   flex-wrap: wrap;
 }
-
 .set {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);

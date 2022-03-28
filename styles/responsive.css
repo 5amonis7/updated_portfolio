@@ -1,5 +1,4 @@
 @media screen and (max-width: 700px) {
-  /* Header */
   #mobile-menu a {
     font-size: 2.5rem;
   }
@@ -9,7 +8,6 @@
   .header {
     height: 60%;
   }
-
   .hamburger {
     display: block;
   }
@@ -34,7 +32,7 @@
     margin: 0;
   }
   #info {
-    border: 3px solid black;
+    border: 3px solid #000;
     border-radius: 50%;
     width: 50%;
     aspect-ratio: 1;
@@ -62,8 +60,6 @@
     bottom: 0;
     transform: translateY(40%);
   }
-
-  /* Top Body */
   #description {
     font-size: 1.5rem;
     width: 90%;
@@ -76,12 +72,10 @@
     height: 9rem;
     font-size: 1rem;
   }
-
-  /* Middle Body */
   .project-title {
     font-size: 1.5rem;
     padding: 1.2rem;
-    margin: 0rem;
+    margin: 0;
   }
   .project-title h5 {
     width: 90%;
@@ -102,11 +96,8 @@
     padding: 0.7rem;
   }
   .links {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
-
-  /* Bottom Body */
-
   #chat-title {
     font-size: 1.5rem;
     width: 90%;
@@ -150,7 +141,6 @@
   }
 }
 @media screen and (min-width: 700px) and (max-width: 900px) {
-  /* Header */
   #mobile-menu a {
     font-size: 2.5rem;
   }
@@ -160,7 +150,6 @@
   .header {
     height: 60%;
   }
-
   .hamburger {
     display: block;
   }
@@ -177,8 +166,6 @@
   .card p {
     font-size: 1.3rem;
   }
-
-  /* Top Body */
   #description {
     font-size: 1.4rem;
     width: 90%;
@@ -190,8 +177,6 @@
   .set {
     width: 12rem;
   }
-
-  /* Middle Bottom */
   .project-title {
     font-size: 1.6rem;
     padding: 3rem;
@@ -211,10 +196,8 @@
     margin: 0.6rem;
   }
   .links {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
-
-  /* Bottom Body */
   #chat-title {
     font-size: 1.5rem;
     width: 90%;
@@ -235,8 +218,6 @@
     padding-left: 1.7rem;
     padding-top: 0.5rem;
   }
-  #personal-info {
-  }
   #personal-info div {
     padding: 0.5rem;
   }
@@ -246,9 +227,7 @@
     padding: 0;
   }
 }
-
 @media screen and (min-width: 900px) and (max-width: 1100px) {
-  /* Header */
   #mobile-menu a {
     font-size: 2.5rem;
   }
@@ -258,7 +237,6 @@
   .header {
     height: 60%;
   }
-
   .hamburger {
     display: block;
   }
@@ -275,8 +253,6 @@
   .card p {
     font-size: 1.5;
   }
-
-  /* Top Body */
   #description {
     font-size: 2rem;
     width: 90%;
@@ -288,8 +264,6 @@
   .set {
     width: 15rem;
   }
-
-  /* Middle Bottom */
   .project-title {
     font-size: 1.8rem;
     padding: 3.5rem;
@@ -309,17 +283,14 @@
     margin: 0.6rem;
   }
   .links {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
-  /* Bottom Body */
   #chat-title {
     font-size: 1.7rem;
     width: 90%;
   }
 }
-
 @media screen and (min-width: 1100px) and (max-width: 1200px) {
-  /* Header */
   #info {
     width: 100%;
   }
@@ -333,8 +304,6 @@
   .card p {
     font-size: 1.5;
   }
-
-  /* Top Body */
   #description {
     font-size: 2.3rem;
     width: 90%;
@@ -346,12 +315,9 @@
   .set {
     width: 17rem;
   }
-
-  /* Middle Body */
   .links {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
-  /* Bottom Body */
   #chat-title {
     font-size: 1.9rem;
     width: 90%;
