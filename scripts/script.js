@@ -66,18 +66,16 @@ function headerInfo() {
                 set.forEach((e) => {
                     e.style.visibility = 'visible';
                 })
+
+                card.forEach((e, ind) => {
+                    e.style.animation = 'rise .3s none';
+                    e.style.animationDelay = `${ind * .3}s`;
+                    setTimeout(function () {
+                        e.style.opacity = '1';
+                    }, ind * 500)
+                })
             }
         })
-    }
-    else {
-        if (isInViewPort(skills) === true) {
-            ball1.style.animation = '';
-            ball3.style.animation = '';
-            ball2.style.animation = '';
-            set.forEach((e) => {
-                e.style.visibility = 'visible';
-            })
-        }
     }
 }
 
@@ -116,19 +114,6 @@ function topFunction() {
 
 
 // Animations
-
-window.onload = function () {
-    if (width > 700) {
-        card.forEach((e, ind) => {
-            e.style.animation = 'rise .3s none';
-            e.style.animationDelay = `${ind * .3}s`;
-            setTimeout(function () {
-                e.style.opacity = '1';
-            }, ind * 500)
-        })
-    }
-}
-
 
 document.querySelectorAll('.letter').forEach(el => {
     el.addEventListener('mouseover', () => {
