@@ -211,7 +211,7 @@ const info = document.querySelector('#info');
 
 
 card.forEach((e) => {
-    if (showing === false) {
+    if (showing === false && width < 700) {
         e.addEventListener('click', () => {
             if (showing === false) {
                 window.scrollTo(0, 0);
