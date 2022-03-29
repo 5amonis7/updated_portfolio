@@ -10,6 +10,24 @@ body {
   font-family: "Libre Franklin", sans-serif;
   cursor: default;
 }
+.show{
+  width: 100% !important;
+  height: 100% !important;
+  transform: translate(0, 0) !important;
+  border-radius: 0px !important;
+  z-index: 100 !important;
+  transition: 0.3s all ease !important;
+}
+.info-show{
+  margin-top: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  transform: translateY(-45%) !important;
+  z-index: 99 !important;
+}
+#info {
+  transition: .5s all ease;
+}
 #container {
   background: url(../images/clean-white-polygon-backgrounds-8-2.jpg);
   background-position: top;

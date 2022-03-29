@@ -34,31 +34,26 @@
   #info {
     border: 3px solid #000;
     border-radius: 50%;
-    width: 50%;
-    aspect-ratio: 1;
+    width: 16em;
+    height: 16rem;
     position: relative;
     margin: 2rem 0 0 0;
     margin-bottom: 10rem;
   }
   .card h3 {
+    position: absolute;
     font-size: 1.5rem;
   }
   #card1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-40%, -20%);
+    transform: translateX(-80%);
   }
   #card2 {
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(40%, -20%);
+    transform: translateX(80%);
   }
   #card3 {
-    position: absolute;
-    bottom: 0;
-    transform: translateY(40%);
+    transform: translateY(130%);
   }
   #description {
     font-size: 1.5rem;

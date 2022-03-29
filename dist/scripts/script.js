@@ -204,4 +204,33 @@ mobileItem.forEach((e) => {
     })
 })
 
+// Mobile card animation
+
+let showing = false;
+const info = document.querySelector('#info');
+
+
+card.forEach((e) => {
+    if (showing === false) {
+        e.addEventListener('click', () => {
+            if (showing === false) {
+                window.scrollTo(0, 0);
+                info.classList.add('info-show');
+                e.classList.add('show')
+                document.body.style.overflow = 'hidden';
+                e.children[1].style.display = 'block';
+                showing = true
+            } else if (showing === true) {
+                info.classList.remove('info-show')
+                document.body.style.overflow = 'visible';
+                e.classList.remove('show')
+                e.children[1].style.display = 'none';
+                showing = false
+
+            }
+        })
+    }
+})
+
+
 
